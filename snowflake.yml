@@ -1,0 +1,15 @@
+definition_version: 1
+native_app:
+  name: SALESFORCE_LAI_AGENT
+  application:
+    name: SALESFORCE_LAI_AGENT
+  source_stage: app_src.stage
+  artifacts:
+    - src: Salesforce_demo_app/*
+      dest: ./
+  package:
+    name: SALESFORCE_LAI_AGENT_PKG
+    scripts:
+      - sql_scripts/setup.sql
+      - sql_scripts/build_views.sql
+      - sql_scripts/shared-content.sql

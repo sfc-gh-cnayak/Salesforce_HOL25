@@ -1,0 +1,12 @@
+manifest_version: 1
+artifacts:
+  setup_script: scripts/setup.sql
+  readme: readme.md
+  extension_code: true
+  default_streamlit: CORE.RESORT_AGENT
+configuration:
+  trace_level: OFF
+  log_level: INFO
+privileges:
+  - IMPORTED PRIVILEGES ON SNOWFLAKE DB:
+        description: "To access account_usage views and SNOWFLAKE TABLE with cortex functions"
